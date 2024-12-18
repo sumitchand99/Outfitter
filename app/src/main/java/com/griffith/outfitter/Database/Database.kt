@@ -14,7 +14,8 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         private const val DATABASE_VERSION = 1
     }
 
-    override fun onCreate(db: SQLiteDatabase) {
+
+    override fun onCreate(db: SQLiteDatabase) { // Adding databas to store the previous serched weather on device.
         db.execSQL(
             """
             CREATE TABLE IF NOT EXISTS WEATHER (
